@@ -69,9 +69,13 @@ also configure `./x.py` to use something else.)
 The stage0 compiler is then used only to compile [`src/bootstrap`],
 [`library/std`], and [`compiler/rustc`]. When assembling the libraries and
 binaries that will become the stage1 `rustc` compiler, the freshly compiled
-`std` and `rustc` are used. There are two concepts at play here: a compiler
-(with its set of dependencies) and its 'target' or 'object' libraries (`std` and
-`rustc`). Both are staged, but in a staggered manner.
+`std` and `rustc` are used. 
+
+There are two concepts at play here: 
+1. A compiler (with its set of dependencies)
+2. Its 'target' or 'object' libraries (`std` and `rustc`). 
+
+Both are staged, but in a staggered manner.
 
 [`compiler/rustc`]: https://github.com/rust-lang/rust/tree/master/compiler/rustc
 [`library/std`]: https://github.com/rust-lang/rust/tree/master/library/std
